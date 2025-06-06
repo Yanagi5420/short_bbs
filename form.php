@@ -7,12 +7,20 @@
 </head>
 <body>
     <h1>💬 一言掲示板</h1>
+    <?php
+    if(isset($_SESSION['name'])){
+        echo $_SESSION['name'],'さん、ようこそ！';
+    }else{
+    echo 'ユーザー名かパスワードが違います。';
+    }
+    ?>
     <form action="post.php" method="post">
         <p>名前：<input type="text" name="name" required></p>
         <p>コメント：<br>
         <textarea name="comment" rows="4" cols="40" required></textarea></p>
         <p><button type="submit">投稿する</button></p>
     </form>
-    <p><a href="view.php">▶ 投稿一覧を見る</a></p>
+<p><a href="view.php">▶ 投稿一覧を見る</a></p>
+<p><a href="logout.php">ログアウト</a></p>
 </body>
 </html>
