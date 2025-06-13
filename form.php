@@ -24,7 +24,7 @@ if (!isset($_SESSION['name'])) {
     ?>
     </p>
     <form action="post.php" method="post">
-        <p>名前：<input type="text" name="name" required></p>
+        <input type="hidden" name="name" value="<?= htmlspecialchars($_SESSION['name']) ?>">
         <p>コメント：<br>
         <textarea name="comment" rows="4" cols="40" required></textarea></p>
         <p><button type="submit">投稿する</button></p>
