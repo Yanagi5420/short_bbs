@@ -26,7 +26,7 @@ if (!isset($_SESSION['name'])) {
     <form action="post.php" method="post">
         <input type="hidden" name="name" value="<?= htmlspecialchars($_SESSION['name']) ?>">
         <p>コメント：<br>
-        <textarea name="comment" rows="4" cols="40" required></textarea></p>
+        <textarea name="content" rows="4" cols="40" required></textarea></p>
         <p><button type="submit">投稿する</button></p>
     </form>
 <p><a href="view.php">▶ 投稿一覧を見る</a></p>
