@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>💬 一言掲示板</h1>
+    <p>
     <?php
     if(isset($_SESSION['name'])){
         echo $_SESSION['name'],'さん、ようこそ！';
@@ -14,6 +15,7 @@
     echo 'ユーザー名かパスワードが違います。';
     }
     ?>
+    </p>
     <form action="post.php" method="post">
         <p>名前：<input type="text" name="name" required></p>
         <p>コメント：<br>
